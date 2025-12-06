@@ -1,26 +1,29 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+
 }
-.container{
+
+.container {
     width: 80vw;
     margin: 10px auto;
 }
 
-.repotrCard{
+.repotrCard {
     width: 100%;
-    height: 400px;
-    box-shadow: 0px 0px 8px rgb(0, 0, 0.8);
+    /* height: 400px; */
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
     padding: 2rem;
     display: flex;
     flex-direction: column;
     gap: 3px;
+    border-radius: 5px;
 
 }
 
 /* headerCard --------------------------------------------------------> */
-.headerCard{
+.headerCard {
     direction: rtl;
     width: 100%;
     display: flex;
@@ -28,7 +31,7 @@
 }
 
 
-.organization-info{
+.organization-info {
     width: 30%;
     display: flex;
     justify-content: center;
@@ -40,55 +43,186 @@
 
 }
 
-.region-info{
+.region-info {
     width: 30%;
     display: flex;
+    flex-direction: column;
     /* justify-content: center; */
-    border: 1px solid;
+    border: 1px solid black;
     padding: 10px;
-    
+
 }
-.student-info{
+
+.student-info {
     width: 30%;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    border: 1px solid;
+    border: 1px solid black;
     padding: 10px;
 }
-.student-photo{
+
+.student-photo {
     width: 10%;
     display: flex;
     justify-content: center;
-    border: 1px solid;
-    padding: 10px;
+    border: 1px solid black;
+    /* padding: 10px; */
 }
+
+.student-photo img {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.logo-student {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    /* border: 1px solid red; */
+    position: relative;
+    /* top: 10%; */
+}
+
+
+.logo-student div:nth-child(1) {
+    width: 55%;
+    height: 55%;
+    /* border: 2px solid; */
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    background: rgb(206, 187, 183);
+    
+}
+
+.logo-student div:nth-child(2) {
+    width: 80%;
+    height: 40%;
+    background: rgb(206, 187, 183);
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
 /*---------------------------------------------------------------------------------------------  */
 
 
 
 /*  mainCard------------------------------------------------------------------------------------->*/
-.mainCard{
+.mainCard {
     width: 100%;
-
+    background-color: white;
 }
 
-.mainCard table{
+table {
     width: 100%;
-    border: 1px solid;
+    border-collapse: collapse;
     direction: rtl;
 }
 
-.mainCard table thead{
-    height: 50px;
+th,
+td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+}
+
+/* عرض ستون‌ها */
+th:nth-child(1),
+td:nth-child(1) {
+    width: 5%;
+}
+
+/* ردیف */
+th:nth-child(2),
+td:nth-child(2) {
+    width: 20%;
+}
+
+/* نام درس */
+th:nth-child(3),
+td:nth-child(3) {
+    width: 8%;
+}
+
+/* واحد */
+th:nth-child(4),
+td:nth-child(4) {
+    width: 10%;
+}
+
+/* نمره نهایی */
+th:nth-child(5),
+th:nth-child(6),
+td:nth-child(5),
+td:nth-child(6) {
+    width: 10% !important;
+}
+
+/* نوبت اول */
+th:nth-child(7),
+th:nth-child(8),
+td:nth-child(7),
+td:nth-child(8) {
+    width: 10% !important;
+}
+
+/* نوبت دوم */
+th:nth-child(9),
+td:nth-child(9) {
+    width: 10%;
+}
+
+/* نتیجه */
+th:nth-child(10),
+td:nth-child(10) {
+    width: 12%;
+}
+
+/* ملاحظات */
+
+
+
+
+.first-turn,
+.second-turn {
+    padding: 0px;
+    border: none;
+}
+
+
+.first-turn span,
+.second-turn span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    /* border:1px solid black; */
+    width: 100%;
+    height: 100%;
+}
+
+
+.first-turn-span,
+.second-turn-span {
+    flex-direction: column;
+    padding: 0px;
+    /* border: 1px solid black; */
+    border: none !important;
 }
 
 
 
 
-.foterCard{
 
-}
-.caption-foterCard{
 
-}
+
+
+.foterCard {}
+
+.caption-foterCard {}
