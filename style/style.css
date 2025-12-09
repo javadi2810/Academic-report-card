@@ -19,6 +19,9 @@
     flex-direction: column;
     gap: 3px;
     border-radius: 5px;
+    max-height: 97vh;
+    overflow: auto;
+
 
 }
 
@@ -130,6 +133,7 @@ td {
     border: 1px solid black;
     text-align: center;
     padding: 5px;
+    min-height: 20px;
 }
 
 /* عرض ستون‌ها */
@@ -217,12 +221,49 @@ td:nth-child(10) {
 }
 
 
+.mainCard  input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    padding: 5px;
+
+}
+
+.mainCard  input:focus{
+    box-shadow:inset 0px 0px 3px rgba(0,0,0, 0.8);
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+/* tfoot -------------------------------------------------------------------------------------------> */
+tfoot{
+    /* border: 2px solid black; */
+    font-size: 1rem;
+    font-weight: bold;
+}
+tfoot .Total-units{
+    width: 8% !important;
+}
+
+.signature{
+    text-align: right;
+    line-height: 30px;
+}
+
+tfoot tr,
+tfoot td{
+    padding: 15px;
+}
 
 
 
 
 
 
+
+
+/* --------------------------------------------------------------------------------------------------- */
 .foterCard {}
 
 .caption-foterCard {}
