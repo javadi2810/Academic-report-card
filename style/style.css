@@ -5,12 +5,26 @@
 
 }
 
+
+
 .container {
     width: 80vw;
     margin: 10px auto;
 }
 
+/* #header{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    height: 50px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.8);
+    margin: 10px 0px;
+} */
+
+/* headerCard ___________________________________________________> */
 .repotrCard {
+    /* margin-left: 10px; */
     width: 100%;
     /* height: 400px; */
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
@@ -19,13 +33,12 @@
     flex-direction: column;
     gap: 3px;
     border-radius: 5px;
-    max-height: 97vh;
-    overflow: auto;
+    /* max-height: 97vh;
+    overflow: auto; */
 
 
 }
 
-/* headerCard --------------------------------------------------------> */
 .headerCard {
     direction: rtl;
     width: 100%;
@@ -101,7 +114,7 @@
     position: absolute;
     top: 10%;
     background: rgb(206, 187, 183);
-    
+
 }
 
 .logo-student div:nth-child(2) {
@@ -112,11 +125,11 @@
     border-top-right-radius: 100px;
 }
 
-/*---------------------------------------------------------------------------------------------  */
+/*------------------------------------------ */
 
 
 
-/*  mainCard------------------------------------------------------------------------------------->*/
+/*  mainCard--------------------------------->*/
 .mainCard {
     width: 100%;
     background-color: white;
@@ -135,6 +148,27 @@ td {
     padding: 5px;
     min-height: 20px;
 }
+
+.mainCard .row span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: px;
+    position: relative;
+    width: 6px !important;
+    height: 6px !important;
+    background-color: rgb(103, 100, 100);
+    color: white;
+    /* padding: 3px; */
+    font-weight: bold;
+    top: 27px;
+    right: -8px;
+    /* cursor: url("../img/Heroicons.html"); */
+
+}
+
+
+
 
 /* عرض ستون‌ها */
 th:nth-child(1),
@@ -188,7 +222,6 @@ td:nth-child(10) {
     width: 12%;
 }
 
-/* ملاحظات */
 
 
 
@@ -221,7 +254,7 @@ td:nth-child(10) {
 }
 
 
-.mainCard  input{
+.mainCard input {
     width: 100%;
     height: 100%;
     border: none;
@@ -231,28 +264,29 @@ td:nth-child(10) {
 
 }
 
-.mainCard  input:focus{
-    box-shadow:inset 0px 0px 3px rgba(0,0,0, 0.8);
+.mainCard input:focus {
+    box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.8);
 }
 
-/* ------------------------------------------------------------------------------------------------- */
-/* tfoot -------------------------------------------------------------------------------------------> */
-tfoot{
+/* ------------------------------------------ */
+/* tfoot ------------------------------------> */
+tfoot {
     /* border: 2px solid black; */
     font-size: 1rem;
     font-weight: bold;
 }
-tfoot .Total-units{
+
+tfoot .Total-units {
     width: 8% !important;
 }
 
-.signature{
+.signature {
     text-align: right;
     line-height: 30px;
 }
 
 tfoot tr,
-tfoot td{
+tfoot td {
     padding: 15px;
 }
 
@@ -267,3 +301,193 @@ tfoot td{
 .foterCard {}
 
 .caption-foterCard {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* modal ____________________________________________________________________________> */
+.edit-modal {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(32, 31, 31); */
+    /* padding: 30px; */
+    position: fixed;
+    top: 0px;
+    /* opacity: 0.9; */
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(6px); /* بلور پس‌زمینه */
+    -webkit-backdrop-filter: blur(6px); /* برای سافاری */
+}
+
+
+
+.edit-modal .edit-form-student {
+    height: fit-content;
+    border-radius: 5px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 2;
+
+    position: relative;   /* اضافه شد */
+    overflow: hidden;  /* که روتیشن بیرون نزنه */
+    z-index: 10;    /* فرم همیشه جلوی همه */
+}
+
+
+.edit-modal form {
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+    background-color: rgb(37, 34, 34);
+    color: wheat;
+    border-radius: 3px;
+    box-shadow: 0px 0px 2px 1px aqua;
+    position: relative;
+    /* z-index: ; */
+    margin: 3px;
+}
+
+
+.edit-modal form div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    gap: 5px;
+}
+
+
+.edit-modal form div input{
+    padding: 7px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: wheat;
+    border: none;
+    outline: none;
+    box-shadow:inset 0px 0px 4px rgba(203, 252, 98, 0.8);
+
+}
+.edit-modal form div input:focus{
+    box-shadow:inset 0px 0px 4px rgba(143, 212, 249, 0.8);
+}
+.Confirm-button-form button:first-child{
+    width: 90%;
+}
+.Confirm-button-form button:last-child{
+    width: 10%;
+}
+
+
+
+
+
+
+
+
+
+/* Rotating animation___________________________________________________________________________________ */
+.edit-modal .rotation {
+    width: 120%;
+    height: 100%;
+    position: relative;
+    z-index: -1;
+    position: absolute;
+    inset: 0;    /* تمام فرم را بپوشاند */
+    z-index: -1;    /* پشت فرم بره */
+    overflow: hidden;
+    animation: rotat 4.5s linear infinite;
+    transition: 2px;
+    left: -25px;
+}
+
+.edit-modal .rotation .rotation0 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.edit-modal .rotation .rotation0 div {
+    width: 50%;
+    height: 50%;
+    position: relative;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.edit-modal .rotation .rotation1 {
+    top: 0px;
+    left: 0px;
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+    background: #2A7B9B;
+    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+}
+
+.edit-modal .rotation .rotation2 {
+    bottom: 0px;
+    right: -50%;
+    clip-path: polygon(0 100%, 100% 100%, 0 0);
+    background: #833AB4;
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+}
+
+.edit-modal .rotation .rotation3 {
+    top: -100%;
+    right: -50%;
+    clip-path: polygon(99% 0, 100% 100%, 0 100%);
+    background: #5148fa;
+    background: linear-gradient(90deg, rgba(81, 72, 250, 1) 0%, rgba(24, 121, 9, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+.edit-modal .rotation .rotation4 {
+    top: -100%;
+    right: 0%;
+    clip-path: polygon(100% 0, 0 100%, 0 0);
+    background: #c002e6;
+    background: linear-gradient(90deg, rgba(192, 2, 230, 1) 0%, rgba(52, 235, 216, 1) 50%, rgba(0, 60, 255, 1) 100%);
+}
+
+
+
+
+@keyframes rotat {
+  
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: -360deg;
+    }
+
+}
+/* _______________________________________________________________________________________________________________________ */
