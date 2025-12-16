@@ -11,7 +11,7 @@
 
 <body>
     <div class="container">
-        <div class="repotrCard">
+        <div class="reportrCard">
             <div class="headerCard">
                 <section class="organization-info">
                     <span>جمهوری اسلامی ایران</span>
@@ -26,9 +26,9 @@
                             <span class="Study-period"> متوسطه دوم</span>
                         </div>
                     </span>
-                </section>
+                </section>تر
 
-                <section class="region-info">
+                <section class="school-info">
                     <div>
                         <span>استان :</span>
                         <span>قم</span>
@@ -244,7 +244,7 @@
                             <td> قبول</td>
                             <td>-</td>
                         </tr>
-
+                    </tbody>
                     <tfoot>
                         <tr>
                             <td colspan="2">مجموع نمرات</td>
@@ -281,8 +281,6 @@
                             </td>
                         </tr>
                     </tfoot>
-
-
                 </table>
             </div>
             <div class="foterCard"></div>
@@ -290,56 +288,82 @@
         </div>
     </div>
 
-    <!-- modam------------------------ -->
-    <div class="edit-modal">
-        <div class="edit-form-student">
-            <form action="">
-                <div>
-                    <lable for="student-Name">نام :</lable>
-                    <input type="text" id="student-Name" placeholder="">
+    <!-- form-login , modal------------------------ -->
+    <div class="edit-modal active"> <!--Add the active class to make it visible.-->
+        <div class="edit-form-container">
+            <form  class="" action="">
+                <div class="form-login">
+
                 </div>
-                <div>
-                    <lable for="student-LastName">نام خانوادگی :</lable>
-                    <input type="text" id="student-LastName" placeholder="">
-                </div>
-                <div>
-                    <lable for="father's-Name">نام پدر :</lable>
-                    <input type="text" id="father's-Name" placeholder="">
-                </div>
-                <div>
-                    <lable for="Birth-certificate-number">شماره شناسنامه :</lable>
-                    <input type="text" id="Birth-certificate-number" placeholder="">
-                </div>
-                <div>
-                    <lable for="National-code">کد ملی :</lable>
-                    <input type="text" id="National-code" placeholder="">
-                </div>
-                <div>
-                    <lable for="date-of-birth"> متولد :</lable>
-                    <input type="text" id="date-of-birth" placeholder="">
-                </div>
-                <div>
-                    <lable for="Student-code">کد دانش آموزی</lable>
-                    <input type="text" id="Student-code" placeholder="">
-                </div>
-                <div class="Confirm-button-form">
-                    <button>تایید</button>
-                    <button>x</button>
+                <div id="modal">
+                    <div class="form-school active"><!--Add the active class to make it visible.-->
+                        <div>
+                            <label for="province">استان :</label>
+                            <input type="text" id="province">
+                        </div>
+                        <div>
+                            <label for="area">منطقه :</label>
+                            <input type="text" id="area">
+                        </div>
+                        <div>
+                            <label for="school">آموزشگاه :</label>
+                            <input type="text" id="school">
+                        </div>
+                        <div><label for="branch">شاخه :</label>
+                            <input type="text" id="branch">
+                        </div>
+                        <div>
+                            <label for="field">رشته :</label>
+                            <input type="text" id="field">
+                        </div>
+                    </div>
+                    <div class="form-student"> <!--Add the active class to make it visible.-->
+                        <div>
+                            <label for="student-Name">نام :</label>
+                            <input type="text" id="student-Name" placeholder="">
+                        </div>
+                        <div>
+                            <label for="student-LastName">نام خانوادگی :</label>
+                            <input type="text" id="student-LastName" placeholder="">
+                        </div>
+                        <div>
+                            <label for="father-Name">نام پدر :</label>
+                            <input type="text" id="father-Name" placeholder="">
+                        </div>
+                        <div>
+                            <label for="Birth-certificate-number">شماره شناسنامه :</label>
+                            <input type="text" id="Birth-certificate-number" placeholder="">
+                        </div>
+                        <div>
+                            <label for="National-code">کد ملی :</label>
+                            <input type="text" id="National-code" placeholder="">
+                        </div>
+                        <div>
+                            <label for="date-of-birth"> متولد :</label>
+                            <input type="text" id="date-of-birth" placeholder="">
+                        </div>
+                        <div>
+                            <label for="Student-code">کد دانش آموزی</label>
+                            <input type="text" id="Student-code" placeholder="">
+                        </div>
+                        <div class="box-buttom-form">
+                            <button type="submit" class="form-student-submit">تایید</button>
+                            <button type="button" class="form-student-close">x</button>
+                        </div>
+                    </div>
                 </div>
             </form>
 
-
-            
+  
             <!-- Rotating animation____________________________________________________________________________ -->
             <div class="rotation">
-                <div class="rotation0">
-                    <div class="rotation1"></div>
-                    <div class="rotation2"></div>
-                    <div class="rotation3"></div>
-                    <div class="rotation4"></div>
+                <div class="box-rotation-color">
+                    <div class="rotation-color1"></div>
+                    <div class="rotation-color2"></div>
+                    <div class="rotation-color3"></div>
+                    <div class="rotation-color4"></div>
                 </div>
             </div>
-            <!-- __________________________________________________________________________________________________ -->
         </div>
 
 
