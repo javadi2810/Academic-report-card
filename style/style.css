@@ -334,11 +334,11 @@ tfoot td {
     /* padding: 30px; */
     position: fixed;
     top: 0px;
-    /* opacity: 0.9; */
-    background-color: rgba(0,0,0,0.8);
-    backdrop-filter: blur(6px); /* بلور پس‌زمینه */
-    -webkit-backdrop-filter: blur(6px); /* برای سافاری */
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     display: none;
+    perspective: 1000px;
 }
 
 .edit-modal.active {
@@ -356,11 +356,63 @@ tfoot td {
     flex-direction: column;
     overflow: hidden;
     z-index: 2;
-    position: relative;   /* اضافه شد */
-    overflow: hidden;  /* که روتیشن بیرون نزنه */
-    z-index: 10;    /* فرم همیشه جلوی همه */
-    
+    position: relative;
+    /* اضافه شد */
+    overflow: hidden;
+    /* که روتیشن بیرون نزنه */
+    z-index: 10;
+    /* فرم همیشه جلوی همه */
+    transition: 1000ms;
+    perspective: 1000px;
+
 }
+
+.edit-form-container.rotat {
+    transform: rotatey(180deg);
+    animation: opacity 500ms;
+}
+
+
+
+
+
+@keyframes opacity{
+    0%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+
+
+.modal-container,
+.login-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    gap: 5px;
+    background-color: rgb(37, 34, 34);
+    margin: 3.5px;
+    padding: 0px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 1px rgba(36, 252, 98, 0.4);
+    /* transform: rotatey(360deg); */
+    transition: 1000ms;
+}
+
+
+.modal-container.rotat,
+.login-container.rotat{
+    transform: rotatey(180deg);
+}
+
 
 /* .form-student ,  .form-school--------------------------------------------------------- */
 .edit-modal .form-school,
@@ -375,14 +427,15 @@ tfoot td {
     background-color: rgb(37, 34, 34);
     color: wheat;
     border-radius: 3px;
-    box-shadow: 0px 0px 2px 1px aqua;
+    /* box-shadow: 0px 0px 2px 1px aqua; */
     position: relative;
     /* z-index: ; */
-    margin: 3px;
+    margin: 5pxpx;
 }
+
 .edit-modal .form-school.active,
-.edit-modal .form-student.active{
-  display: flex;
+.edit-modal .form-student.active {
+    display: flex;
 }
 
 
@@ -398,25 +451,83 @@ tfoot td {
 }
 
 
-.edit-modal form div input{
+.edit-modal form div input {
     padding: 7px;
     border-radius: 5px;
     background-color: transparent;
     color: wheat;
     border: none;
     outline: none;
-    box-shadow:inset 0px 0px 4px rgba(203, 252, 98, 0.8);
+    box-shadow: inset 0px 0px 4px rgba(203, 252, 98, 0.8);
 
 }
-.edit-modal form div input:focus{
-    box-shadow:inset 0px 0px 4px rgba(143, 212, 249, 0.8);
+
+.edit-modal form div input:focus {
+    box-shadow: inset 0px 0px 4px rgba(143, 212, 249, 0.8);
 }
-.box-buttom-form .form-student-submit{
-    width: 90%;
+
+
+
+/* box-buttom-form---------------- */
+.box-buttom-form{
+    margin-top: 15px;
 }
-.box-buttom-form .form-student-close{
+.box-buttom-form .login-student-submit,
+.box-buttom-form .login-school-submit,
+.box-buttom-form .modal-student-submit,
+.box-buttom-form .modal-school-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    color: white;
+    background-color: green;
+    border: none;
+    outline: none;
+    width: 100%;
+    transition: 1000ms;
+}
+
+.box-buttom-form .login-student-close,
+.box-buttom-form .login-school-close,
+.box-buttom-form .modal-student-close,
+.box-buttom-form .modal-school-close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    color: white;
+    background-color: red;
+    border: none;
+    outline: none;
     width: 10%;
+    display: none;
 }
+.box-buttom-form .login-student-close.show,
+.box-buttom-form .login-school-close.show,
+.box-buttom-form .modal-student-close.show,
+.box-buttom-form .modal-school-close.show{
+    display: flex;
+} 
+
+
+.box-buttom-form .login-student-submit:hover,
+.box-buttom-form .login-school-submit:hover,
+.box-buttom-form .login-student-close:hover,
+.box-buttom-form .login-school-close:hover{
+    transform:scale(1.02)
+}
+
+
+
+
+/* ======================================================================================================================= */
+
+
+
+
+
+
 
 
 
@@ -432,13 +543,15 @@ tfoot td {
     height: 100%;
     position: relative;
     position: absolute;
-    inset: 0;    /* تمام فرم را بپوشاند */
-    z-index: -1;   
+    inset: 0;
+    /* تمام فرم را بپوشاند */
+    z-index: -1;
     overflow: hidden;
     animation: rotat 4.5s linear infinite;
     transition: 2px;
     left: -25px;
 }
+
 
 .edit-modal .rotation .box-rotation-color {
     width: 100%;
@@ -490,11 +603,12 @@ tfoot td {
 
 
 @keyframes rotat {
-  
-    0%{
+
+    0% {
         rotate: 0deg;
     }
-    100%{
+
+    100% {
         rotate: -360deg;
     }
 

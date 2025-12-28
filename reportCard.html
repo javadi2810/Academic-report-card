@@ -26,7 +26,7 @@
                             <span class="Study-period"> متوسطه دوم</span>
                         </div>
                     </span>
-                </section>تر
+                </section>
 
                 <section class="school-info">
                     <div>
@@ -288,75 +288,86 @@
         </div>
     </div>
 
+
+
+    
     <!-- form-login , modal------------------------ -->
     <div class="edit-modal active"> <!--Add the active class to make it visible.-->
         <div class="edit-form-container">
-            <form  class="" action="">
+            <!---By adding the rotat class, this section rotates 180 degrees on the y-axis.-->
+            <form id="Information-form" class="" action="">
                 <div class="form-login">
+                    <div class="login-container">
+                        <!---By adding the rotat class, this section rotates 180 degrees on the y-axis.-->
+                        <div class="form-student active"> <!--Add the active class to make it visible.-->
+                            <div>
+                                <label for="student-Name">نام :</label>
+                                <input type="text" id="student-Name" placeholder="">
+                            </div>
+                            <div>
+                                <label for="student-LastName">نام خانوادگی :</label>
+                                <input type="text" id="student-LastName" placeholder="">
+                            </div>
+                            <div>
+                                <label for="father-Name">نام پدر :</label>
+                                <input type="text" id="father-Name" placeholder="">
+                            </div>
+                            <div>
+                                <label for="Birth-certificate-number">شماره شناسنامه :</label>
+                                <input type="text" id="Birth-certificate-number" placeholder="">
+                            </div>
+                            <div>
+                                <label for="National-code">کد ملی :</label>
+                                <input type="text" id="National-code" placeholder="">
+                            </div>
+                            <div>
+                                <label for="date-of-birth"> متولد :</label>
+                                <input type="text" id="date-of-birth" placeholder="">
+                            </div>
+                            <div>
+                                <label for="Student-code">کد دانش آموزی</label>
+                                <input type="text" id="Student-code" placeholder="">
+                            </div>
+                            <div class="box-buttom-form">
+                                <button type="submit" class="login-student-submit">تایید</button>
+                                <button type="button" class="login-student-close">x</button>
+                                <!--It is displayed by adding the show class.-->
+                            </div>
+                        </div>
+                        <div class="form-school"><!--Add the active class to make it visible.-->
+                            <div>
+                                <label for="province">استان :</label>
+                                <input type="text" id="province">
+                            </div>
+                            <div>
+                                <label for="area">منطقه :</label>
+                                <input type="text" id="area">
+                            </div>
+                            <div>
+                                <label for="school">آموزشگاه :</label>
+                                <input type="text" id="school">
+                            </div>
+                            <div><label for="branch">شاخه :</label>
+                                <input type="text" id="branch">
+                            </div>
+                            <div>
+                                <label for="field">رشته :</label>
+                                <input type="text" id="field">
+                            </div>
+                            <div class="box-buttom-form">
+                                <button type="submit" class="login-school-submit">تایید</button>
+                                <button type="button" class="login-school-close show">x</button>
+                                <!--It is displayed by adding the show class.-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                </div>
-                <div id="modal">
-                    <div class="form-school active"><!--Add the active class to make it visible.-->
-                        <div>
-                            <label for="province">استان :</label>
-                            <input type="text" id="province">
-                        </div>
-                        <div>
-                            <label for="area">منطقه :</label>
-                            <input type="text" id="area">
-                        </div>
-                        <div>
-                            <label for="school">آموزشگاه :</label>
-                            <input type="text" id="school">
-                        </div>
-                        <div><label for="branch">شاخه :</label>
-                            <input type="text" id="branch">
-                        </div>
-                        <div>
-                            <label for="field">رشته :</label>
-                            <input type="text" id="field">
-                        </div>
-                    </div>
-                    <div class="form-student"> <!--Add the active class to make it visible.-->
-                        <div>
-                            <label for="student-Name">نام :</label>
-                            <input type="text" id="student-Name" placeholder="">
-                        </div>
-                        <div>
-                            <label for="student-LastName">نام خانوادگی :</label>
-                            <input type="text" id="student-LastName" placeholder="">
-                        </div>
-                        <div>
-                            <label for="father-Name">نام پدر :</label>
-                            <input type="text" id="father-Name" placeholder="">
-                        </div>
-                        <div>
-                            <label for="Birth-certificate-number">شماره شناسنامه :</label>
-                            <input type="text" id="Birth-certificate-number" placeholder="">
-                        </div>
-                        <div>
-                            <label for="National-code">کد ملی :</label>
-                            <input type="text" id="National-code" placeholder="">
-                        </div>
-                        <div>
-                            <label for="date-of-birth"> متولد :</label>
-                            <input type="text" id="date-of-birth" placeholder="">
-                        </div>
-                        <div>
-                            <label for="Student-code">کد دانش آموزی</label>
-                            <input type="text" id="Student-code" placeholder="">
-                        </div>
-                        <div class="box-buttom-form">
-                            <button type="submit" class="form-student-submit">تایید</button>
-                            <button type="button" class="form-student-close">x</button>
-                        </div>
-                    </div>
-                </div>
             </form>
 
-  
+
             <!-- Rotating animation____________________________________________________________________________ -->
-            <div class="rotation">
+            <div class="rotation opacity">
                 <div class="box-rotation-color">
                     <div class="rotation-color1"></div>
                     <div class="rotation-color2"></div>
