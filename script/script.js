@@ -13,6 +13,13 @@ let formStudent = document.querySelector(".form-student");
 let formSchool = document.querySelector(".form-school");
 
 
+// form data----------------------------------------------
+let dataStudent=document.querySelector(".form-student form")
+let dataSchool=document.querySelector(".form-school form")
+
+
+
+
 // buttons----------------------
 let login_student_submit = document.querySelector(".login-student-submit");
 let login_student_close = document.querySelector(".login-student-close");
@@ -29,10 +36,13 @@ let formModal
 
 
 
+
+
 const actions = {
     "login-student-submit": () => {
         rotateForm(true);
         formToggle(formStudent, formSchool)
+        
     },
     "login-school-close": () => {
         rotateForm(false);
@@ -79,6 +89,7 @@ function Converting(){
 
             formContainer.classList.add("modal-container")
             formContainer.classList.remove("login-container")
+
 
 
             // buttons-----------------------------------------------

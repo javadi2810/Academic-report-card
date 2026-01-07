@@ -376,16 +376,17 @@ tfoot td {
 
 
 
-@keyframes opacity{
-    0%{
-        opacity:1;
+@keyframes opacity {
+    0% {
+        opacity: 1;
     }
 
-    50%{
-        opacity:0;
+    50% {
+        opacity: 0;
     }
-    100%{
-        opacity:1;
+
+    100% {
+        opacity: 1;
     }
 }
 
@@ -409,7 +410,7 @@ tfoot td {
 
 
 .modal-container.rotat,
-.login-container.rotat{
+.login-container.rotat {
     transform: rotatey(180deg);
 }
 
@@ -418,11 +419,7 @@ tfoot td {
 .edit-modal .form-school,
 .edit-modal .form-student {
     width: 350px;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
+    display: none !important;
     padding: 30px;
     background-color: rgb(37, 34, 34);
     color: wheat;
@@ -435,14 +432,23 @@ tfoot td {
 
 .edit-modal .form-school.active,
 .edit-modal .form-student.active {
+    display: flex !important;
+}
+
+
+.edit-modal .form-school form,
+.edit-modal .form-student form {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
 }
 
 
 
 
-
-.edit-modal form div {
+.edit-modal .form div {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -451,7 +457,7 @@ tfoot td {
 }
 
 
-.edit-modal form div input {
+.edit-modal .form div input {
     padding: 7px;
     border-radius: 5px;
     background-color: transparent;
@@ -462,16 +468,17 @@ tfoot td {
 
 }
 
-.edit-modal form div input:focus {
+.edit-modal .form div input:focus {
     box-shadow: inset 0px 0px 4px rgba(143, 212, 249, 0.8);
 }
 
 
 
 /* box-buttom-form---------------- */
-.box-buttom-form{
+.box-buttom-form {
     margin-top: 15px;
 }
+
 .box-buttom-form .login-student-submit,
 .box-buttom-form .login-school-submit,
 .box-buttom-form .modal-student-submit,
@@ -491,7 +498,7 @@ tfoot td {
 .box-buttom-form .login-student-close,
 .box-buttom-form .login-school-close,
 .box-buttom-form .modal-student-close,
-.box-buttom-form .modal-school-close{
+.box-buttom-form .modal-school-close {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -503,19 +510,20 @@ tfoot td {
     width: 10%;
     display: none;
 }
+
 .box-buttom-form .login-student-close.show,
 .box-buttom-form .login-school-close.show,
 .box-buttom-form .modal-student-close.show,
-.box-buttom-form .modal-school-close.show{
+.box-buttom-form .modal-school-close.show {
     display: flex;
-} 
+}
 
 
 .box-buttom-form .login-student-submit:hover,
 .box-buttom-form .login-school-submit:hover,
 .box-buttom-form .login-student-close:hover,
-.box-buttom-form .login-school-close:hover{
-    transform:scale(1.02)
+.box-buttom-form .login-school-close:hover {
+    transform: scale(1.02)
 }
 
 
@@ -544,7 +552,6 @@ tfoot td {
     position: relative;
     position: absolute;
     inset: 0;
-    /* تمام فرم را بپوشاند */
     z-index: -1;
     overflow: hidden;
     animation: rotat 4.5s linear infinite;
